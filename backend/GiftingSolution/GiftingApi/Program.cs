@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 
 
 // Setting up our "Services"
-builder.Services.AddTransient<ICatalogPeople, FakePeopleCatalog>(); // hey, API, if you need an ICatalogPeople, use this class.
+builder.Services.AddTransient<ICatalogPeople, EfPeopleCatelog>(); // hey, API, if you need an ICatalogPeople, use this class.
 
 builder.Services.AddDbContext<GiftingDataContext>(options =>
 {
